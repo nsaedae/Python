@@ -47,7 +47,39 @@ print('rs3 : ', rs3)
 print('rs4 : ', rs4)
 
 
-
-
 # 함수의 지역변수, 전역변수
+var1 = 1
+
+def scope_test():
+    # 전역변수 var1을 참조하기 위한 global 선언
+    global var1
+    var1 += 2
+    print('var1 : ', var1)
+
+
+scope_test()
+
 # 함수를 변수에 저장해서 호출하기
+def message( param ):
+    print('param : ', param)
+
+
+val1 = message
+val2 = message
+
+val1('김유신')
+val1('김춘추')
+
+def plus(x, y):
+    return x+y
+
+def minus(x, y):
+    return x-y
+
+
+list = [plus, minus]
+r1 = list[0](1, 2)
+r2 = list[1](1, 2)
+
+print('r1 : ', r1)
+print('r2 : ', r2)
