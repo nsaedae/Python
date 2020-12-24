@@ -17,18 +17,21 @@
 			<th>등록일</th>
 			<th>관리</th>
 		</tr>
+
+		{% for member in members %}
 		<tr>
-			<td>a101</td>
-			<td>홍길동</td>
-			<td>010-1234-1234</td>
-			<td>사원</td>
-			<td>101</td>
-			<td>20-12-24</td>
+			<td>{{member.uid}}</td>
+			<td>{{member.name}}</td>
+			<td>{{member.hp}}</td>
+			<td>{{member.pos}}</td>
+			<td>{{member.dep}}</td>
+			<td>{{member.rdate}}</td>
 			<td>
 				<a href="#">수정</a>
 				<a href="#">삭제</a>
 			</td>
 		</tr>
+		{% endfor %}
 	</table>
 
 </body>
